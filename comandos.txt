@@ -1,0 +1,8 @@
+comandos:
+
+pra compilar os arquivos:
+javac NomeClasse.java
+javac *.java (compila todos)
+
+pra rodar:
+java NomeClasse
