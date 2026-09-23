@@ -2,7 +2,7 @@ public class Conta{
 
     private static int quantidadeContas = 0;
 
-    private String numero;
+    private int numero;
     private double saldo;
     private Cliente cliente;
 
@@ -20,12 +20,12 @@ public class Conta{
         return Conta.quantidadeContas;
     }
 
-    public static String getProximoNumero(){
+    public static int getProximoNumero(){
         Conta.quantidadeContas++;
-        return "" + (Conta.quantidadeContas);
+        return Conta.quantidadeContas;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return this.numero;
     }
 

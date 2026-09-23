@@ -15,14 +15,14 @@ public class TestaArrayContas {
         System.out.println(contaCarmen.getNumero());
         System.out.println();
 
-        Conta teste = banco.pesquisar("4");
-        Conta teste2 = banco.pesquisar("1");
+        Conta teste = banco.pesquisar(4);
+        Conta teste2 = banco.pesquisar(1);
 
         System.out.println();
         System.out.println("Nome do Cliente: "+ teste2.getCliente().getNome());
 
         System.out.println();
-        banco.remover("4");
+        banco.remover(4);
 
         Conta novaContaCarmen = new Conta(10000.00, carmen);
         //banco.inserir(novaContaCarmen);

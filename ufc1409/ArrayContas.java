@@ -18,16 +18,16 @@ public class ArrayContas{
         }
     }
 
-    public int procurarIndice(String num){
+    public int procurarIndice(int num){
         for (int i = 0; i < indice; i++){
-            if (contas[i].getNumero().equals(num)){
+            if (contas[i].getNumero() == num){
                 return i;
             }
         }
         return -1;
     }
 
-    public boolean existe(String num){
+    public boolean existe(int num){
         boolean resp = false;
         int i = this.procurarIndice(num);
         if(i != -1){
@@ -45,7 +45,7 @@ public class ArrayContas{
         }
     }
 
-    public Conta pesquisar(String num){
+    public Conta pesquisar(int num){
         Conta resp = null;
         if (existe(num)){
             int i = this.procurarIndice(num);
@@ -56,7 +56,7 @@ public class ArrayContas{
         return resp;
     }
 
-    public void remover(String num){
+    public void remover(int num){
         if (existe(num)){
             int ind = this.procurarIndice(num);
             for (int i = ind; i < indice-1; i++){
@@ -69,7 +69,7 @@ public class ArrayContas{
         }
     }
 
-    public void remover2(String num){
+    public void remover2(int num){
         int i = procurarIndice(num);
         if (i != -1){
             contas[i] = contas[indice-1];
